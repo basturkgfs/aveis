@@ -6688,13 +6688,20 @@ background-color:#dce6f2;
     height:138px;
     background:url(../img/ville2.png) no-repeat;  
 }
+/*  Debut Logo aveis en fonction de l'écran */
 .superposition-derriere-bandeau{
     float:right;
     margin-top:0px;
     width: 50%;
     height:138px;
-    background:url(../img/Aveis_Logo.png) no-repeat;  
 }
+@media (min-width: 768px) {
+  .superposition-derriere-bandeau {
+    background:url(../img/Aveis_Logo.png) no-repeat;  
+  }
+}
+
+/* Fin Logo aveis en fonction de l'écran */
 html{
     height: 100%;
 }
@@ -6706,6 +6713,22 @@ body{
      min-height: 100%;
 }
 footer
+{
+    position: relative;
+    bottom: 0;
+    margin-top:5px;
+    color:#185c5c;
+    background-color : #66ccff;
+    text-align:center;
+    width: 100%;
+    padding: 25px 25px;
+    background-color: #00699b;
+    height: auto;
+    font-size: 1vw;
+    overflow: hidden;
+    /*font: bold 16px sans-serif;*/
+}
+.footer
 {
     position: absolute;
     bottom: 0;
