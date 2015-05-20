@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>NOUS CONTACTER</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/perso.css">
+        <SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="../js/construitxml.js"></SCRIPT>
+
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+    <!-- Groupe le menu au cas où le l'écran est de petite résolution -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                        <a class="navbar-brand" href="../aveis_fiabilisez.html"><img src="../img/logoAveis.png" alt="Logo de Aveis"></a>
+                    </div>
+
+    <!-- Affichage de notre menu -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav">
+                        <li><a href="../aveis_fiabilisez.html">Accueil <span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Notre soci&eacute;t&eacute; <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">A propos</a></li>
+                            <li><a href="#">Notre identit&eacute;</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown ">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Notre solution <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="../Aveis_Avocats/aveis_avocats.html">Av&eacute;is Avocats</a></li>
+                            <li><a href="../Aveis_RH/aveis_rh.html">Av&eacute;is RH </a></li>
+                            <li><a href="#">Trustinb</a></li>
+                            <li><a href="#">Goelet</a></li>
+                            <li><a href="#">Cligo</a></li>
+                            <li><a href="#">Inscription Web-d&eacute;mo gratuite</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Nos services</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                          <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Entrer votre recherche">
+                            </div>
+                              <button type="submit" class="btn btn-default">Rechercher <span class="glyphicon glyphicon-search"></span></button>
+                          </form>
+                      </ul>
+                    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+            </nav>
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h3>Nous contacter</h3></div>
+                        <div class="panel-body">
+                          <div class="col-sm-12">
+                              <label>T&eacute;l&eacute;phone :</label> +33 9 70 40 87 75
+                          </div>
+                          <div class="col-sm-12">
+                              <label>Adresse postale :</label> 41, rue du Lac  - 69003 Lyon - La Part-Dieu
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-md-6 col-md-offset-3">
+                <form name="valeur" id="valeur" class="well form-horizontal">
+                     
+                        <div class="row form-group">
+                            <label class="col-sm-4 control-label">Email <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</label>
+                            <div class="col-sm-5">
+                                <input type="email" class="form-control" placeholder="Email de l'&eacute;metteur" required="" name="pMailEmetteur">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Civilit&eacute; <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</label>
+                            <div class="col-sm-5">
+                                <select class="input-sm" required="" name="civilite">
+                                    <optgroup label="Choisissez une civilit&eacute;">
+                                        <option value="M." >M.</option>
+                                        <option value="Mme">Mme</option>
+                                        <option value="Mlle">Mlle</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" placeholder="Votre nom" required="" name="nom">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Pr&eacute;nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" placeholder="Votre pr&eacute;nom" required="" name="prenom">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Soci&eacute;t&eacute; :</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" placeholder="Votre soci&eacute;t&eacute;" name="societe">
+                            </div>
+                        </div>
+                            <!-- mail du destinataire c'est à dire nous (aveis)-->
+                                <input class="form-control" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
+                            <!-- sujet ou provenance mail du : ici c'est le site principal-->
+                            <input type="hidden" class="form-control" name="pSujet" value="le site principal">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Corps du mail <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</label>
+                            <div class="col-sm-5">
+                                <textarea name="pCorpsmail" rows="5" cols="8" class="form-control" required="" placeholder="Contenu de votre mail"></textarea>
+                            </div>
+                        </div>
+                        <!-- copie du mail-->
+                        <input type="hidden" class="form-control" name="pMailCopie">
+                        <!-- Piece jointe du mail-->
+                            <input type="hidden" class="form-control" name="pFichierjoint">
+                        <div class="row ">
+                            <label class="col-sm-1 control-label"></label>
+                            <div class="form-group col-sm-5 " >
+                                <input type="button" value="Envoyer le mail" onclick="construitxml()">
+                            </div>
+                        </div>                      
+                    
+                </form>
+                <form action="http://195.154.232.2:82/AVEIS_WS_WEB/awws/AVEIS_SITE.awws" method=post name="xmlform" id="xmlform" target="_self">
+                    <input type="hidden" value=""  name="xml" id="xml">
+                    <input type="hidden" value=""  name="action" id="action">
+                </form>
+            </div>
+        </div>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+    </body>
+</html>
