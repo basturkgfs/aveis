@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/bootstrap.css">
         <SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="js/construitxml.js"></SCRIPT>
+        <SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="../js/dateJeudiDynamiques.js"></SCRIPT>
     </head>
     <body>
         <div id="superglobal">
@@ -135,7 +136,7 @@
                             <div class="row">
                                 <div class="col-md-12 text-souligne text-gras text-justify">Les web-d&eacute;mos gratuites - Inscription</div>
                                 <div class="col-md-12 text-left">
-                                    <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date1">Jeudi 14 mai &agrave; 14h30</a>
+                                    <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date1"><script> document.write("Jeudi "+jeudi[0] + " à 14h30 (Paris)")</script></a>
                                         <div class="modal fade inscription_demo-modal-date1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                           <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
@@ -144,13 +145,13 @@
                                                     <h2 class="modal-title">Inscription &agrave; une web-d&eacute;mo</h2>
                                                 </div><p></p>
                                                 <div class="modal-body">
-                                                    <form name="valeur" id="valeur" class="form-horizontal">
+                                                    <form name="jeudi1" id="valeur" class="form-horizontal">
                                                         <div class="row">
                                                             <div class="col-md-7">
                                                                 <div class="row col-md-12">
                                                                     <p class="col-sm-4 control-label">Date retenue :</p>
                                                                     <div class="col-sm-5">
-                                                                        <input type="text" class="text" required="" name="pMailEmetteur" value="12/05/2015" readonly="">
+                                                                        <input type="text" class="text" required=""  name="jeudi_1" readonly="" onload="affichage(this.forms.jeudi_1)">
                                                                     </div>
                                                                 </div>
                                                                 <div class="row col-md-12">
@@ -166,7 +167,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="row col-md-12">
-                                                                    <p class="col-sm-4 control-label"> Pr&eacute;nom :</p>
+                                                                    <p class="col-sm-4 control-label"> Pr&eacute;nom : <span class="facul">(Facultatif)</span></p>
                                                                     <div class="col-sm-5">
                                                                         <input type="text" class="text" required="" name="prenom">
                                                                     </div>
@@ -190,7 +191,7 @@
                                                                     <div class="col-sm-5">
                                                                         <div class="row">
                                                                             <div class="col-md-12">
-                                                                                <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
+                                                                                <textarea name="pCorpsmail" rows="5" cols="40" class="text" required=""></textarea>
                                                                             </div>
                                                                             <p></p>
                                                                             <div class="col-md-6">
@@ -231,7 +232,7 @@
                                         </div>
                                 </div>
                                 <div class="col-md-12 text-left">
-                                    <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date2">Jeudi 21 mai &agrave; 14h30</a>
+                                    <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date2"><script> document.write("Jeudi "+jeudi[1] + " à 14h30 (Paris)")</script></a>
                                         <div class="modal fade inscription_demo-modal-date2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                           <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
@@ -240,13 +241,13 @@
                                                     <h2 class="modal-title">Nous contacter</h2>
                                                 </div><p></p>
                                                 <div class="modal-body">
-                                                    <form name="valeur" id="valeur" class="form-horizontal">
-                                                       <div class="row">
+                                                    <form name="jeudi1" id="valeur" class="form-horizontal">
+                                                        <div class="row">
                                                             <div class="col-md-7">
                                                                 <div class="row col-md-12">
                                                                     <p class="col-sm-4 control-label">Date retenue :</p>
                                                                     <div class="col-sm-5">
-                                                                        <input type="text" class="text" required="" name="pMailEmetteur" value="21/05/2015" readonly="">
+                                                                        <input type="text" class="text" required=""  name="jeudi_1" readonly="" onload="affichage(this.forms.jeudi_1)">
                                                                     </div>
                                                                 </div>
                                                                 <div class="row col-md-12">
@@ -262,7 +263,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="row col-md-12">
-                                                                    <p class="col-sm-4 control-label"> Pr&eacute;nom :</p>
+                                                                    <p class="col-sm-4 control-label"> Pr&eacute;nom : <span class="facul">(Facultatif)</span></p>
                                                                     <div class="col-sm-5">
                                                                         <input type="text" class="text" required="" name="prenom">
                                                                     </div>
@@ -286,7 +287,7 @@
                                                                     <div class="col-sm-5">
                                                                         <div class="row">
                                                                             <div class="col-md-12">
-                                                                                <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
+                                                                                <textarea name="pCorpsmail" rows="5" cols="40" class="text" required=""></textarea>
                                                                             </div>
                                                                             <p></p>
                                                                             <div class="col-md-6">
@@ -327,7 +328,7 @@
                                         </div>
                                 </div>
                                 <div class="col-md-12 text-left">
-                                    <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date3">Jeudi 28 mai &agrave; 14h30</a>
+                                    <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date3"><script> document.write("Jeudi "+jeudi[2] + " à 14h30 (Paris)")</script></a>
                                         <div class="modal fade inscription_demo-modal-date3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                           <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
@@ -336,13 +337,13 @@
                                                     <h2 class="modal-title">Inscription &agrave; une web-d&eacute;mo</h2>
                                                 </div><p></p>
                                                 <div class="modal-body">
-                                                    <form name="valeur" id="valeur" class="form-horizontal">
+                                                    <form name="jeudi1" id="valeur" class="form-horizontal">
                                                         <div class="row">
                                                             <div class="col-md-7">
                                                                 <div class="row col-md-12">
                                                                     <p class="col-sm-4 control-label">Date retenue :</p>
                                                                     <div class="col-sm-5">
-                                                                        <input type="text" class="text" required="" name="pMailEmetteur" value="28/05/2015" readonly="">
+                                                                        <input type="text" class="text" required=""  name="jeudi_1" readonly="" onload="affichage(this.forms.jeudi_1)">
                                                                     </div>
                                                                 </div>
                                                                 <div class="row col-md-12">
@@ -358,7 +359,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="row col-md-12">
-                                                                    <p class="col-sm-4 control-label"> Pr&eacute;nom :</p>
+                                                                    <p class="col-sm-4 control-label"> Pr&eacute;nom : <span class="facul">(Facultatif)</span></p>
                                                                     <div class="col-sm-5">
                                                                         <input type="text" class="text" required="" name="prenom">
                                                                     </div>
@@ -382,7 +383,7 @@
                                                                     <div class="col-sm-5">
                                                                         <div class="row">
                                                                             <div class="col-md-12">
-                                                                                <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
+                                                                                <textarea name="pCorpsmail" rows="5" cols="40" class="text" required=""></textarea>
                                                                             </div>
                                                                             <p></p>
                                                                             <div class="col-md-6">
@@ -425,108 +426,108 @@
                             </div>
                         </div>
                     </div>
-                        <div class="col-md-2 col-xs-12 cadre-un fond article-bandeau article-bandeau-milieu">
-                            <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="police-nous-contacter">Nous contacter</a>
-                            <div class="col-md-12">
-                                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                  <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h2 class="modal-title">Nous contacter</h2>
-                                        </div><p></p>
-                                        <div class="modal-body">
-                                            <form name="valeur" id="valeur" class="form-horizontal">
-                                                <div class="row">
-                                                    <div class="col-md-7">
-                                                        <div class="row col-md-12">
-                                                            <p class="col-sm-4 control-label"><span class="text-danger">*</span> Email :</p>
-                                                            <div class="col-sm-5">
-                                                                <input type="email" class="text" required="" name="pMailEmetteur">
-                                                            </div>
+                    <div class="col-md-2 col-xs-12 cadre-un fond article-bandeau article-bandeau-milieu">
+                        <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="police-nous-contacter">Nous contacter</a>
+                        <div class="col-md-12">
+                            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h2 class="modal-title">Nous contacter</h2>
+                                    </div><p></p>
+                                    <div class="modal-body">
+                                        <form name="valeur" id="valeur" class="form-horizontal">
+                                            <div class="row">
+                                                <div class="col-md-7">
+                                                    <div class="row col-md-12">
+                                                        <p class="col-sm-4 control-label"><span class="text-danger">*</span> Email :</p>
+                                                        <div class="col-sm-5">
+                                                            <input type="email" class="text" required="" name="pMailEmetteur">
                                                         </div>
-                                                        <div class="row col-md-12">
-                                                              <p class="control-label col-md-4"><span class="text-danger">*</span> Civilit&eacute; :</p>
-                                                            <div class="col-md-8">
-                                                                <select class="text col-md-8" name="civilite">
-                                                                        <option value="M." >M. </option>
-                                                                        <option value="Mme">Mme</option>
-                                                                        <option value="Mlle">Mlle</option>
-                                                                </select>
-                                                            </div>
+                                                    </div>
+                                                    <div class="row col-md-12">
+                                                          <p class="control-label col-md-4"><span class="text-danger">*</span> Civilit&eacute; :</p>
+                                                        <div class="col-md-8">
+                                                            <select class="text col-md-8" name="civilite">
+                                                                    <option value="M." >M. </option>
+                                                                    <option value="Mme">Mme</option>
+                                                                    <option value="Mlle">Mlle</option>
+                                                            </select>
                                                         </div>
-                                                        <div class="row col-md-12">
-                                                            <p class="col-md-4 control-label"><span class="text-danger">*</span> Nom :</p>
-                                                            <div class="col-md-5">
-                                                                <input type="text" class="text" required="" name="nom">
-                                                            </div>
+                                                    </div>
+                                                    <div class="row col-md-12">
+                                                        <p class="col-md-4 control-label"><span class="text-danger">*</span> Nom :</p>
+                                                        <div class="col-md-5">
+                                                            <input type="text" class="text" required="" name="nom">
                                                         </div>
-                                                        <div class="row col-md-12">
-                                                            <p class="col-sm-4 control-label">Pr&eacute;nom :</p>
-                                                            <div class="col-sm-5">
-                                                                <input type="text" class="text" required="" name="prenom">
-                                                            </div>
+                                                    </div>
+                                                    <div class="row col-md-12">
+                                                        <p class="col-sm-4 control-label">Pr&eacute;nom : <span class="facul">(Facultatif)</span></p>
+                                                        <div class="col-sm-5">
+                                                            <input type="text" class="text" required="" name="prenom">
                                                         </div>
-                                                        <div class="row col-md-12">
-                                                            <p class="col-sm-4 control-label">Soci&eacute;t&eacute; :</p>
-                                                            <div class="col-sm-5">
-                                                                <input type="text" class="text" name="societe">
-                                                            </div>
+                                                    </div>
+                                                    <div class="row col-md-12">
+                                                        <p class="col-sm-4 control-label">Soci&eacute;t&eacute; : <span class="facul">(Facultatif)</span></p>
+                                                        <div class="col-sm-5">
+                                                            <input type="text" class="text" name="societe">
                                                         </div>
-                                                        <!-- mail du destinataire c'est à dire nous (aveis)-->
-                                                            <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
-                                                        <!-- sujet ou provenance mail du : ici c'est le site principal-->
-                                                        <input type="hidden" class="text" name="pSujet" value="Aveis RH">
-                                                        <div class="row col-md-12">
-                                                            <p class="col-sm-4 control-label"><span class="text-danger">*</span> Corps du mail :</p>
-                                                            <div class="col-sm-5">
-                                                                <div class="row">
-                                                                    <div class="col-md-12">
-                                                                        <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
-                                                                    </div>
-                                                                    <p></p>
-                                                                    <div class="col-md-6">
-                                                                        <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
-                                                                    </div>
+                                                    </div>
+                                                    <!-- mail du destinataire c'est à dire nous (aveis)-->
+                                                        <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
+                                                    <!-- sujet ou provenance mail du : ici c'est le site principal-->
+                                                    <input type="hidden" class="text" name="pSujet" value="Aveis RH">
+                                                    <div class="row col-md-12">
+                                                        <p class="col-sm-4 control-label"><span class="text-danger">*</span> Corps du mail : <span class="facul">(Facultatif)</span></p>
+                                                        <div class="col-sm-5">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <textarea name="pCorpsmail" rows="5" cols="40" class="text" required=""></textarea>
+                                                                </div>
+                                                                <p></p>
+                                                                <div class="col-md-6">
+                                                                    <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                            <!-- copie du mail-->
-                                                                <input type="hidden" class="form-control" name="pMailCopie">
-                                                            <!-- Piece jointe du mail-->
-                                                                <input type="hidden" class="form-control" name="pFichierjoint">
-                                                        <div class="row ">
-                                                            <label class="col-sm-1 control-label"></label>
-                                                            <div class="form-group col-sm-5 col-sm-offset-4" >
-                                                            </div>
+                                                    </div>
+                                                        <!-- copie du mail-->
+                                                            <input type="hidden" class="form-control" name="pMailCopie">
+                                                        <!-- Piece jointe du mail-->
+                                                            <input type="hidden" class="form-control" name="pFichierjoint">
+                                                    <div class="row ">
+                                                        <label class="col-sm-1 control-label"></label>
+                                                        <div class="form-group col-sm-5 col-sm-offset-4" >
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-5 ligne_verticale visible-lg">
-                                                            <div class="">
-                                                              <div class="col-sm-12">
-                                                                  <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
-                                                                  <p  class="text-center">+33 9 70 40 87 75</p>
-                                                              </div>
-                                                              <div class="col-sm-12">
-                                                                  <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
-                                                              </div>
-                                                            </div>
-                                                    </div>
                                                 </div>
-                                            </form>
-                                            <form action="http://195.154.232.2:82/AVEIS_WS_WEB/awws/AVEIS_SITE.awws" method=post name="xmlform" id="xmlform" target="_self">
-                                                <input type="hidden" value=""  name="xml" id="xml">
-                                                <input type="hidden" value=""  name="action" id="action">
-                                            </form>
-                                        </div> 
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
-                                        </div>
-                                    </div> <!-- Fin modal-content --> 
-                                  </div>
-                                </div>
+                                                <div class="col-md-5 ligne_verticale visible-lg">
+                                                        <div class="">
+                                                          <div class="col-sm-12">
+                                                              <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
+                                                              <p  class="text-center">+33 9 70 40 87 75</p>
+                                                          </div>
+                                                          <div class="col-sm-12">
+                                                              <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
+                                                          </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <form action="http://195.154.232.2:82/AVEIS_WS_WEB/awws/AVEIS_SITE.awws" method=post name="xmlform" id="xmlform" target="_self">
+                                            <input type="hidden" value=""  name="xml" id="xml">
+                                            <input type="hidden" value=""  name="action" id="action">
+                                        </form>
+                                    </div> 
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
+                                    </div>
+                                </div> <!-- Fin modal-content --> 
+                              </div>
                             </div>
                         </div>
+                    </div>
                 <div class="col-md-5 col-xs-12 cadre-un fond article-bandeau article-bandeau-droit">  
                     <div class="row">
                         <div class="col-md-2 hidden-xs">
