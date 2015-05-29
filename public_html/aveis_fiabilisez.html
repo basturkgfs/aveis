@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="js/construitxml.js"></SCRIPT>
         <SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="js/dateJeudiDynamiques.js"></SCRIPT>
-        <script> document.forms.jeudi_1.value = jeudi[0];</script>
+        <script type="text/javascript"> 
+            document.jeudi1.pMailEmetteur.value = jeudi[0];
+        </script>
     </head>
     <body>
     <div id="superglobal">
@@ -287,7 +289,7 @@
                                                                 <div class="row col-md-12">
                                                                     <p class="col-sm-4 control-label">Date retenue :</p>
                                                                     <div class="col-sm-5">
-                                                                        <input type="text" class="text" required="" value="" name="jeudi_1" readonly="">
+                                                                        <input type="text" class="text" required=""  name="jeudi_1" readonly="" onload="affichage(this.forms.jeudi_1)">
                                                                     </div>
                                                                 </div>
                                                                 <div class="row col-md-12">
@@ -684,7 +686,7 @@
                     <div class="col-md-8">
                         <div class="row">
                             <div class="col-md-4">
-                                <a href="aveis_fiabilisez.html" class="lien police-bando-haut">Voir tous nos logiciel</a>
+                                <a href="aveis_fiabilisez.html" class="lien police-bando-haut">Voir tous nos logiciels</a>
                             </div>
                             <div class="col-md-4">
                                 <a href="aveis_decouvrez.html" class="lien police-bando-haut">D&eacute;couvrez Av&eacute;is</a>
@@ -703,6 +705,7 @@
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript">
+            // script pour gerer la taille (meme taille) automatique des trois articles du footer
             $.fn.sameHeights = function(childrenSelector) {
             $(this).each(function(){
             var tallest = 0;
@@ -715,6 +718,9 @@
 };          $(document).ready(function() {
             $('.boxes').sameHeights('.article-bandeau');
             });
+        </script>
+        <script type="text/javascript">
+            $('input[type=text].jeudi_1').val(jeudi[0]);
         </script>
     </body>
 </html>

@@ -6715,20 +6715,21 @@ body{
 }
 footer
 {
-    
     bottom: 0;
     margin-top:5px;
     color:#185c5c;
     /*background-color : #66ccff;*/
     text-align:center;
     width: 100%;
-    padding: 25px 25px 0px 25px;
+    padding: 25px ;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
 /*    background-color: #00699b;*/
     height: auto;
     /*font-size: 1vw;*/
     overflow: hidden;
     /*font: bold 16px sans-serif;*/
-/*    margin-top: 130px;**********************************ATTENTION**********************************************************/
     position: relative;
 }
 .footer
@@ -6740,7 +6741,10 @@ footer
     /*background-color : #66ccff;*/
     text-align:center;
     width: 100%;
-    padding: 25px 25px 0px 25px;
+    padding: 25px ;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
     /*background-color: #00699b;*/
     height: auto;
     /*font-size: 1vw;*/
@@ -6839,4 +6843,7 @@ footer
     color: red;
     text-align: left;
     font-size: 20px;
+}
+.no-background{
+    background-color: #ffffff;
 }
