@@ -6,9 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.css">
         <SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="js/construitxml.js"></SCRIPT>
+        <SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="js/dateJeudiDynamiques.js"></SCRIPT>
+        <script> document.forms["jeudi1"].jeudi_1 = jeudi[0];</script>
     </head>
     <body>
-    <div id="superglobal">
+    <div id="superglobal" style="background-image: url(img/AveisSite_FondExtranet.png); overflow: hidden;">
         <div id="global">
             <nav class="navbar navbar-default container-fluid">
                 <!-- Partie du menu visible que sur écran réduit -->
@@ -35,11 +37,11 @@
                             </div>
                         </div>
                 </div><!-- /Fin partie menu visible que sur écran réduit -->
-                <div class="row">
-                    <div class="hidden-xs">
-                        <div class="col-md-12 superposition-derriere">
+                <div class="hidden-xs">
+                    <div class="row">
+                        <div class="col-md-12 superposition-derriere-bandeau-3">
                             <div class="pull-right">
-                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <div class="collapse navbar-collapse combo-langue" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> &nbsp;<span style="color: #000">Français</span> &nbsp;&nbsp;<img src="img/france.png" alt=""> <span class="caret"></span></a>
@@ -52,6 +54,12 @@
                                       </ul>
                                     </div>
                             </div>
+                        </div>
+                        <div class="col-md-12 superposition-derriere-bandeau-2">
+                            
+                        </div>
+                        <div class="col-md-12 superposition-derriere-bandeau-1">
+                            <a href="aveis_fiabilisez.html"><img src="img/Aveis_Logo_2012.jpeg" alt="Logo de Aveis" class="img-responsive"></a>
                         </div>
                     </div>
                 </div>
@@ -82,7 +90,37 @@
                     <div class="col-md-6">
                         <img src="img/image_1_1.png" alt="fiabilise Aveis Rh" class="img-responsive">
                     </div>
-                        <span class="text-souligne text-gras text-justify">Les associ&eacute;s fondateurs</span><br/>
+                    <a href="#" data-toggle="modal" data-target="#Associes" title="Ouvrir l'article">
+                        <p class="text-souligne text-gras text-justify police-article-titre">Les associ&eacute;s fondateurs</p>
+                    </a>
+                        <!-- Modal -->
+                            <div class="modal fade" id="Associes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">La bonne connaissance des collaborateurs</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                   <span class="visible-xs">Av&eacute;is est dirig&eacute;e depuis 11 ans par ses associ&eacute;s fondateurs, Denis DEPOORTER et Gr&eacute;gory ZULIANI.</span>
+                                    <p class="hidden-xs">
+                                        <span class="text-gras">Gr&eacute;gory ZULIANI</span>, est Ing&eacute;nieur diplôm&eacute; de l'École Nationale Sup&eacute;rieure d'Arts et M&eacute;tiers. Avec 20 ann&eacute;es 
+                                        d'exp&eacute;rience professionnelle, il possède une forte expertise des processus de gestion et de la conduite de 
+                                        projets. Gr&eacute;gory ZULIANI est  en charge du consulting.
+                                    </p>
+                                    <p class="hidden-xs">
+                                        <span class="text-gras">Denis DEPOORTER</span>, est Ing&eacute;nieur MIAGE dipl&ocirc;m&eacute; de l'Institut Technique des Banques. 
+                                        Avec 25 ann&eacute;es d'exp&eacute;rience professionnelle il possède une solide exp&eacute;rience de l'encadrement d'&eacute;quipes et de la 
+                                        conduite de projets informatiques. Denis DEPOORTER est en charge des d&eacute;veloppements informatiques.
+                                    </p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        <!-- Fin Modal -->
                         <span class="visible-xs">Av&eacute;is est dirig&eacute;e depuis 11 ans par ses associ&eacute;s fondateurs, Denis DEPOORTER et Gr&eacute;gory ZULIANI.</span>
                         <p class="hidden-xs">
                             <span class="text-gras">Gr&eacute;gory ZULIANI</span>, est Ing&eacute;nieur diplôm&eacute; de l'École Nationale Sup&eacute;rieure d'Arts et M&eacute;tiers. Avec 20 ann&eacute;es 
@@ -100,7 +138,32 @@
                     <div class="col-md-3">
                         <img src="img/image_6_2.png" alt="Web demo Aveis" class="img-responsive">
                     </div>
-                        <span class="text-souligne text-gras text-justify">La French Tech</span>,
+                    <a href="#" data-toggle="modal" data-target="#FrenchTech" title="Ouvrir l'article">
+                        <p class="text-souligne text-gras text-justify police-article-titre">La French Tech,</p>
+                    </a>
+                    <!-- Modal -->
+                            <div class="modal fade" id="FrenchTech" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">La bonne connaissance des collaborateurs</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                   <span class="visible-xs">Simples, efficaces, performants, les logiciels Av&eacute;is sont conçus et d&eacute;velopp&eacute;s en France, par nos &eacute;quipes techniques.</span>
+                                    <span class="hidden-xs">Depuis 11 ans Av&eacute;is d&eacute;veloppe son domaine d’expertise : la simplification et la standardisation 
+                                        des processus de gestion. Pour cela, nous maîtrisons en interne tout le cycle de Recherche et D&eacute;veloppement. Et 
+                                        parce qu’un logiciel ne vaut que s’il est bien utilis&eacute;, nous affirmons nos valeurs : la proximit&eacute; avec nos clients, 
+                                        la r&eacute;activit&eacute; à leurs besoins et le respect des engagements.
+                                    </span>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        <!-- Fin Modal -->
                         <span class="visible-xs">Simples, efficaces, performants, les logiciels Av&eacute;is sont conçus et d&eacute;velopp&eacute;s en France, par nos &eacute;quipes techniques.</span>
                         <span class="hidden-xs">Depuis 11 ans Av&eacute;is d&eacute;veloppe son domaine d’expertise : la simplification et la standardisation 
                             des processus de gestion. Pour cela, nous maîtrisons en interne tout le cycle de Recherche et D&eacute;veloppement. Et 
@@ -115,266 +178,266 @@
             <!-- /.pied de page -->
             
             <footer>
-            <div class="row">
-                <div class="col-md-12 cadre-un fond article-bandeau article-bandeau-gauche">
-                    <div class="col-md-3">
+                <div class="row ">
+                    <div class="container-fluid boxes">
+                    <div class="col-md-5 col-xs-12 cadre-un fond article-bandeau article-bandeau-gauche">
+                        <div class="col-md-2 hidden-xs">
                         <img src="img/demo.png" alt="Aveis web demo" class="img-responsive">
-                    </div>
-                    <div class="col-md-9">
-                        <div class="row">
-                            <div class="col-md-12 text-souligne text-gras text-justify">Les web-d&eacute;mos gratuites - Inscription</div>
-                            <div class="col-md-12 text-left">
-                                <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date1">Jeudi 14 mai &agrave; 14h30</a>
-                                    <div class="modal fade inscription_demo-modal-date1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h2 class="modal-title">Inscription &agrave; une web-d&eacute;mo</h2>
-                                            </div><p></p>
-                                            <div class="modal-body">
-                                                <form name="valeur" id="valeur" class="form-horizontal">
-                                                    <div class="row">
-                                                        <div class="col-md-7">
-                                                            <div>
-                                                                <p class="col-sm-4 control-label">Date retenue :</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="pMailEmetteur" value="12/05/2015" readonly="">
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-12 text-souligne text-gras text-justify">Les web-d&eacute;mos gratuites - Inscription</div>
+                                <div class="col-md-12 text-left">
+                                    <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date1"><script> document.write("Jeudi "+jeudi[0] + " à 14h30 (Paris)")</script></a>
+                                        <div class="modal fade inscription_demo-modal-date1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h2 class="modal-title">Inscription &agrave; une web-d&eacute;mo</h2>
+                                                </div><p></p>
+                                                <div class="modal-body">
+                                                    <form name="valeur" id="valeur" class="form-horizontal">
+                                                        <div class="row">
+                                                            <div class="col-md-7">
+                                                                <div>
+                                                                    <p class="col-sm-4 control-label">Date retenue :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="pMailEmetteur" value="12/05/2015" readonly="">
+                                                                    </div>
+                                                                </div><div>
+                                                                    <p class="col-sm-4 control-label">Email <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="email" class="text" required="" name="pMailEmetteur">
+                                                                    </div>
                                                                 </div>
-                                                            </div><div>
-                                                                <p class="col-sm-4 control-label">Email <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="email" class="text" required="" name="pMailEmetteur">
+                                                                <div class="">
+                                                                    <p class="col-sm-4 control-label">Nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="nom">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="nom">
+                                                                <div class="">
+                                                                    <p class="col-sm-4 control-label">Pr&eacute;nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="prenom">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Pr&eacute;nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="prenom">
-                                                                </div>
-                                                            </div>
-                                                            <!-- mail du destinataire c'est à dire nous (aveis)-->
-                                                                <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
-                                                            <!-- sujet ou provenance mail du : ici c'est le site principal-->
-                                                            <input type="hidden" class="text" name="pSujet" value="Aveis RH">
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Corps du mail <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
-                                                                        </div>
-                                                                        <p></p>
-                                                                        <div class="col-md-6">
-                                                                            <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
+                                                                <!-- mail du destinataire c'est à dire nous (aveis)-->
+                                                                    <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
+                                                                <!-- sujet ou provenance mail du : ici c'est le site principal-->
+                                                                <input type="hidden" class="text" name="pSujet" value="Aveis RH">
+                                                                <div class="">
+                                                                    <p class="col-sm-4 control-label">Corps du mail <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                                    <div class="col-sm-5">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
+                                                                            </div>
+                                                                            <p></p>
+                                                                            <div class="col-md-6">
+                                                                                <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                                <!-- copie du mail-->
-                                                                    <input type="hidden" class="form-control" name="pMailCopie">
-                                                                <!-- Piece jointe du mail-->
-                                                                    <input type="hidden" class="form-control" name="pFichierjoint">
-                                                            <div class="row ">
-                                                                <label class="col-sm-1 control-label"></label>
-                                                                <div class="form-group col-sm-5 col-sm-offset-4" >
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-5 ligne_verticale visible-lg">
-                                                                <div class="">
-                                                                  <div class="col-sm-12">
-                                                                      <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
-                                                                      <p  class="text-center">+33 9 70 40 87 75</p>
-                                                                  </div>
-                                                                  <div class="col-sm-12">
-                                                                      <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
-                                                                  </div>
-                                                                </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div> 
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
-                                            </div>
-                                        </div> <!-- Fin modal-content --> 
-                                      </div>
-                                    </div>
-                            </div>
-                            <div class="col-md-12 text-left">
-                                <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date2">Jeudi 21 mai &agrave; 14h30</a>
-                                    <div class="modal fade inscription_demo-modal-date2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h2 class="modal-title">Nous contacter</h2>
-                                            </div><p></p>
-                                            <div class="modal-body">
-                                                <form name="valeur" id="valeur" class="form-horizontal">
-                                                    <div class="row">
-                                                        <div class="col-md-7">
-                                                            <div>
-                                                                <p class="col-sm-4 control-label">Email <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="email" class="text" required="" name="pMailEmetteur">
-                                                                </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="nom">
-                                                                </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Pr&eacute;nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="prenom">
-                                                                </div>
-                                                            </div>
-                                                            <!-- mail du destinataire c'est à dire nous (aveis)-->
-                                                                <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
-                                                            <!-- sujet ou provenance mail du : ici c'est le site principal-->
-                                                            <input type="hidden" class="text" name="pSujet" value="Aveis RH">
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Corps du mail <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
-                                                                        </div>
-                                                                        <p></p>
-                                                                        <div class="col-md-6">
-                                                                            <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
-                                                                        </div>
+                                                                    <!-- copie du mail-->
+                                                                        <input type="hidden" class="form-control" name="pMailCopie">
+                                                                    <!-- Piece jointe du mail-->
+                                                                        <input type="hidden" class="form-control" name="pFichierjoint">
+                                                                <div class="row ">
+                                                                    <label class="col-sm-1 control-label"></label>
+                                                                    <div class="form-group col-sm-5 col-sm-offset-4" >
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                                <!-- copie du mail-->
-                                                                    <input type="hidden" class="form-control" name="pMailCopie">
-                                                                <!-- Piece jointe du mail-->
-                                                                    <input type="hidden" class="form-control" name="pFichierjoint">
-                                                            <div class="row ">
-                                                                <label class="col-sm-1 control-label"></label>
-                                                                <div class="form-group col-sm-5 col-sm-offset-4" >
-                                                                </div>
+                                                            <div class="col-md-5 ligne_verticale visible-lg">
+                                                                    <div class="">
+                                                                      <div class="col-sm-12">
+                                                                          <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
+                                                                          <p  class="text-center">+33 9 70 40 87 75</p>
+                                                                      </div>
+                                                                      <div class="col-sm-12">
+                                                                          <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
+                                                                      </div>
+                                                                    </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-5 ligne_verticale visible-lg">
+                                                    </form>
+                                                </div> 
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
+                                                </div>
+                                            </div> <!-- Fin modal-content --> 
+                                          </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-12 text-left">
+                                    <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date2"><script> document.write("Jeudi "+jeudi[1] + " à 14h30 (Paris)")</script></a>
+                                        <div class="modal fade inscription_demo-modal-date2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h2 class="modal-title">Nous contacter</h2>
+                                                </div><p></p>
+                                                <div class="modal-body">
+                                                    <form name="valeur" id="valeur" class="form-horizontal">
+                                                        <div class="row">
+                                                            <div class="col-md-7">
+                                                                <div>
+                                                                    <p class="col-sm-4 control-label">Email <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="email" class="text" required="" name="pMailEmetteur">
+                                                                    </div>
+                                                                </div>
                                                                 <div class="">
-                                                                  <div class="col-sm-12">
-                                                                      <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
-                                                                      <p  class="text-center">+33 9 70 40 87 75</p>
-                                                                  </div>
-                                                                  <div class="col-sm-12">
-                                                                      <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
-                                                                  </div>
+                                                                    <p class="col-sm-4 control-label">Nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="nom">
+                                                                    </div>
                                                                 </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div> 
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
-                                            </div>
-                                        </div> <!-- Fin modal-content --> 
-                                      </div>
-                                    </div>
-                            </div>
-                            <div class="col-md-12 text-left">
-                                <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date3">Jeudi 28 mai &agrave; 14h30</a>
-                                    <div class="modal fade inscription_demo-modal-date3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h2 class="modal-title">Inscription &agrave; une web-d&eacute;mo</h2>
-                                            </div><p></p>
-                                            <div class="modal-body">
-                                                <form name="valeur" id="valeur" class="form-horizontal">
-                                                    <div class="row">
-                                                        <div class="col-md-7">
-                                                            <div>
-                                                                <p class="col-sm-4 control-label">Email <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="email" class="text" required="" name="pMailEmetteur">
+                                                                <div class="">
+                                                                    <p class="col-sm-4 control-label">Pr&eacute;nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="prenom">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="nom">
-                                                                </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Pr&eacute;nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="prenom">
-                                                                </div>
-                                                            </div>
-                                                            <!-- mail du destinataire c'est à dire nous (aveis)-->
-                                                                <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
-                                                            <!-- sujet ou provenance mail du : ici c'est le site principal-->
-                                                            <input type="hidden" class="text" name="pSujet" value="Aveis RH">
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Corps du mail <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
-                                                                        </div>
-                                                                        <p></p>
-                                                                        <div class="col-md-6">
-                                                                            <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
+                                                                <!-- mail du destinataire c'est à dire nous (aveis)-->
+                                                                    <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
+                                                                <!-- sujet ou provenance mail du : ici c'est le site principal-->
+                                                                <input type="hidden" class="text" name="pSujet" value="Aveis RH">
+                                                                <div class="">
+                                                                    <p class="col-sm-4 control-label">Corps du mail <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                                    <div class="col-sm-5">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
+                                                                            </div>
+                                                                            <p></p>
+                                                                            <div class="col-md-6">
+                                                                                <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                                <!-- copie du mail-->
-                                                                    <input type="hidden" class="form-control" name="pMailCopie">
-                                                                <!-- Piece jointe du mail-->
-                                                                    <input type="hidden" class="form-control" name="pFichierjoint">
-                                                            <div class="row ">
-                                                                <label class="col-sm-1 control-label"></label>
-                                                                <div class="form-group col-sm-5 col-sm-offset-4" >
+                                                                    <!-- copie du mail-->
+                                                                        <input type="hidden" class="form-control" name="pMailCopie">
+                                                                    <!-- Piece jointe du mail-->
+                                                                        <input type="hidden" class="form-control" name="pFichierjoint">
+                                                                <div class="row ">
+                                                                    <label class="col-sm-1 control-label"></label>
+                                                                    <div class="form-group col-sm-5 col-sm-offset-4" >
+                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                            <div class="col-md-5 ligne_verticale visible-lg">
+                                                                    <div class="">
+                                                                      <div class="col-sm-12">
+                                                                          <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
+                                                                          <p  class="text-center">+33 9 70 40 87 75</p>
+                                                                      </div>
+                                                                      <div class="col-sm-12">
+                                                                          <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
+                                                                      </div>
+                                                                    </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="col-md-5 ligne_verticale visible-lg">
+                                                    </form>
+                                                </div> 
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
+                                                </div>
+                                            </div> <!-- Fin modal-content --> 
+                                          </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-12 text-left">
+                                    <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date3"><script> document.write("Jeudi "+jeudi[2] + " à 14h30 (Paris)")</script></a>
+                                        <div class="modal fade inscription_demo-modal-date3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h2 class="modal-title">Inscription &agrave; une web-d&eacute;mo</h2>
+                                                </div><p></p>
+                                                <div class="modal-body">
+                                                    <form name="valeur" id="valeur" class="form-horizontal">
+                                                        <div class="row">
+                                                            <div class="col-md-7">
+                                                                <div>
+                                                                    <p class="col-sm-4 control-label">Email <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="email" class="text" required="" name="pMailEmetteur">
+                                                                    </div>
+                                                                </div>
                                                                 <div class="">
-                                                                  <div class="col-sm-12">
-                                                                      <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
-                                                                      <p  class="text-center">+33 9 70 40 87 75</p>
-                                                                  </div>
-                                                                  <div class="col-sm-12">
-                                                                      <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
-                                                                  </div>
+                                                                    <p class="col-sm-4 control-label">Nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="nom">
+                                                                    </div>
                                                                 </div>
+                                                                <div class="">
+                                                                    <p class="col-sm-4 control-label">Pr&eacute;nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="prenom">
+                                                                    </div>
+                                                                </div>
+                                                                <!-- mail du destinataire c'est à dire nous (aveis)-->
+                                                                    <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
+                                                                <!-- sujet ou provenance mail du : ici c'est le site principal-->
+                                                                <input type="hidden" class="text" name="pSujet" value="Aveis RH">
+                                                                <div class="">
+                                                                    <p class="col-sm-4 control-label">Corps du mail <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                                    <div class="col-sm-5">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
+                                                                            </div>
+                                                                            <p></p>
+                                                                            <div class="col-md-6">
+                                                                                <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                    <!-- copie du mail-->
+                                                                        <input type="hidden" class="form-control" name="pMailCopie">
+                                                                    <!-- Piece jointe du mail-->
+                                                                        <input type="hidden" class="form-control" name="pFichierjoint">
+                                                                <div class="row ">
+                                                                    <label class="col-sm-1 control-label"></label>
+                                                                    <div class="form-group col-sm-5 col-sm-offset-4" >
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-5 ligne_verticale visible-lg">
+                                                                    <div class="">
+                                                                      <div class="col-sm-12">
+                                                                          <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
+                                                                          <p  class="text-center">+33 9 70 40 87 75</p>
+                                                                      </div>
+                                                                      <div class="col-sm-12">
+                                                                          <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
+                                                                      </div>
+                                                                    </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </form>
-                                            </div> 
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
-                                            </div>
-                                        </div> <!-- Fin modal-content --> 
-                                      </div>
-                                    </div>
+                                                    </form>
+                                                </div> 
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
+                                                </div>
+                                            </div> <!-- Fin modal-content --> 
+                                          </div>
+                                        </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="cadre-un fond article-bandeau article-bandeau-milieu">
-                        <div class="col-md-12">
-                            <center><a href="" class="" data-toggle="modal" data-target=".bs-example-modal-lg">Nous contacter</a></center>
-                            <br/><br/><br/><div class="col-md-12">
+                        <div class="col-md-2 col-xs-12 cadre-un fond article-bandeau article-bandeau-milieu">
+                            <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="police-nous-contacter">Nous contacter</a>
+                            <div class="col-md-12">
                                 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                   <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
@@ -386,35 +449,35 @@
                                             <form name="valeur" id="valeur" class="form-horizontal">
                                                 <div class="row">
                                                     <div class="col-md-7">
-                                                        <div>
-                                                            <p class="col-sm-4 control-label">Email <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                        <div class="row col-md-12">
+                                                            <p class="col-sm-4 control-label"><span class="text-danger">*</span> Email :</p>
                                                             <div class="col-sm-5">
                                                                 <input type="email" class="text" required="" name="pMailEmetteur">
                                                             </div>
                                                         </div>
-                                                        <div class="">
-                                                            <p class="col-sm-4 control-label">Civilit&eacute; <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                            <div class="col-sm-5">
-                                                                <select class="text" name="civilite">
-                                                                    <option value="M." >M. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                                        <div class="row col-md-12">
+                                                              <p class="control-label col-md-4"><span class="text-danger">*</span> Civilit&eacute; :</p>
+                                                            <div class="col-md-8">
+                                                                <select class="text col-md-8" name="civilite">
+                                                                        <option value="M." >M. </option>
                                                                         <option value="Mme">Mme</option>
                                                                         <option value="Mlle">Mlle</option>
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="">
-                                                            <p class="col-sm-4 control-label">Nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                            <div class="col-sm-5">
+                                                        <div class="row col-md-12">
+                                                            <p class="col-md-4 control-label"><span class="text-danger">*</span> Nom :</p>
+                                                            <div class="col-md-5">
                                                                 <input type="text" class="text" required="" name="nom">
                                                             </div>
                                                         </div>
-                                                        <div class="">
-                                                            <p class="col-sm-4 control-label">Pr&eacute;nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                        <div class="row col-md-12">
+                                                            <p class="col-sm-4 control-label">Pr&eacute;nom :</p>
                                                             <div class="col-sm-5">
                                                                 <input type="text" class="text" required="" name="prenom">
                                                             </div>
                                                         </div>
-                                                        <div class="">
+                                                        <div class="row col-md-12">
                                                             <p class="col-sm-4 control-label">Soci&eacute;t&eacute; :</p>
                                                             <div class="col-sm-5">
                                                                 <input type="text" class="text" name="societe">
@@ -424,8 +487,8 @@
                                                             <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
                                                         <!-- sujet ou provenance mail du : ici c'est le site principal-->
                                                         <input type="hidden" class="text" name="pSujet" value="Aveis RH">
-                                                        <div class="">
-                                                            <p class="col-sm-4 control-label">Corps du mail <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                        <div class="row col-md-12">
+                                                            <p class="col-sm-4 control-label"><span class="text-danger">*</span> Corps du mail :</p>
                                                             <div class="col-sm-5">
                                                                 <div class="row">
                                                                     <div class="col-md-12">
@@ -474,33 +537,57 @@
                                 </div>
                             </div>
                         </div>
+                <div class="col-md-5 col-xs-12 cadre-un fond article-bandeau article-bandeau-droit">  
+                    <div class="row">
+                        <div class="col-md-2 hidden-xs">
+                            <img src="img/demo.png" alt="Aveis La documentation" class="img-responsive">
+                        </div>
+                        <div class="col-md-10">
+                            <div class="col-md-12 text-souligne text-gras text-justify">La documentation</div> 
+                            <div class="col-md-12  text-left"><a href="Documentations/Aveis-Rh_Pr&eacute;sentation.pdf" target="_blank">Av&eacute;is Rh</a></div>
+                            <!--<div class="col-md-12  text-left"><a href="#" target="_blank">Etudes de cas Av&eacute;is Rh</a></div> -->
+                            <div class="col-md-12 text-left"><a href="Documentations/Aveis-Rh_Fonctions.pdf" target="_blank">D&eacute;tail des fonctions</a></div>
+                            <div class="col-md-12 text-left"><a href="Documentations/Aveis-Rh_ExpertsComptables.pdf" target="_blank">Av&eacute;is Rh pour experts-comptables</a></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="cadre-un fond article-bandeau article-bandeau-droit">
-                    <div class="col-md-3">
-                        <img src="img/demo.png" alt="Aveis La documentation" class="img-responsive">
                     </div>
-                    <div class="col-md-9">
-                        <div class="col-md-12 text-souligne text-gras text-justify">La documentation</div> 
-                        <div class="col-md-12  text-left"><a href="Documentations/Aveis-Rh_Pr&eacute;sentation.pdf" target="_blank">Av&eacute;is Rh</a></div>
-                        <!--<div class="col-md-12  text-left"><a href="#" target="_blank">Etudes de cas Av&eacute;is Rh</a></div> -->
-                        <div class="col-md-12 text-left"><a href="Documentations/Aveis-Rh_Fonctions.pdf" target="_blank">D&eacute;tail des fonctions</a></div>
-                        <div class="col-md-12 text-left"><a href="Documentations/Aveis-Rh_ExpertsComptables.pdf" target="_blank">Av&eacute;is Rh pour experts-comptables</a></div>
-                    </div>
-                </div><br/><br/>
             </div> 
-                <div class="row">
-                    <div class="col-md-6">
-                            <div class="col-md-12">
-                                <a href="aveis_fiabilisez.html" class="lien police-footer">Voir tous nos logiciels</a>
+                <div class="row footer-footer">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="aveis_fiabilisez.html" class="lien police-bando-haut">Voir tous nos logiciel</a>
                             </div>
+                            <div class="col-md-4">
+                                <a href="aveis_decouvrez.html" class="lien police-bando-haut">D&eacute;couvrez Av&eacute;is</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="aveis_technologies.html" class="lien police-bando-haut">La technologie à votre service</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <a href="mentions.html" class="lien police-footer">Mentions L&eacute;gales</a>
+                    <div class="col-md-4">
+                        <a href="mentions.html" class="lien police-bando-haut">Mentions L&eacute;gales</a>
                     </div>
                 </div>
             </footer>
     </div>
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $.fn.sameHeights = function(childrenSelector) {
+            $(this).each(function(){
+            var tallest = 0;
+            $(this).children(childrenSelector).each(function(i){
+            if (tallest < $(this).height()) { tallest = $(this).height(); }
+            });
+            $(this).children(childrenSelector).css({'height': tallest});
+            });
+            return this;
+};          $(document).ready(function() {
+            $('.boxes').sameHeights('.article-bandeau');
+            });
+        </script>
     </body>
 </html>

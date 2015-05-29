@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.css">
         <SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="js/construitxml.js"></SCRIPT>
+        <SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="js/dateJeudiDynamiques.js"></SCRIPT>
+        <script> document.forms.jeudi_1.value = jeudi[0];</script>
     </head>
     <body>
     <div id="superglobal">
@@ -35,11 +37,11 @@
                             </div>
                         </div>
                 </div><!-- /Fin partie menu visible que sur écran réduit -->
-                <div class="row">
-                    <div class="hidden-xs">
-                        <div class="col-md-12 superposition-derriere">
+                <div class="hidden-xs">
+                    <div class="row">
+                        <div class="col-md-12 superposition-derriere-bandeau-3">
                             <div class="pull-right">
-                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <div class="collapse navbar-collapse combo-langue" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> &nbsp;<span style="color: #000">Français</span> &nbsp;&nbsp;<img src="img/france.png" alt=""> <span class="caret"></span></a>
@@ -53,12 +55,18 @@
                                     </div>
                             </div>
                         </div>
+                        <div class="col-md-12 superposition-derriere-bandeau-2">
+                            
+                        </div>
+                        <div class="col-md-12 superposition-derriere-bandeau-1">
+                            <a href="aveis_fiabilisez.html"><img src="img/Aveis_Logo_2012.jpeg" alt="Logo de Aveis" class="img-responsive"></a>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                        <div class="col-md-12 bandeau-haut">
-                            <div class="col-md-2 col-md-offset-1">
-                                <a href="#" class="police-bando-haut">Fiabilisez vos donn&eacute;es</a>
+                            <div class="col-md-2 col-md-offset-1 selected">
+                                <a href="#" class="police-bando-haut ">Fiabilisez vos donn&eacute;es</a> &nbsp;
                             </div>
                             <div class="col-md-2">
                                 <a href="#" class="police-bando-haut">Planifiez votre activit&eacute;</a>
@@ -78,12 +86,40 @@
         <!-- Debut conteneur -->
         <div class="container"> 
             <div class="row">
-                <div class="col-md-5 article">
+                <div class="col-md-10  col-md-offset-1"> 
+                <div class="col-md-5 article ">
                     <div class="row">
                     <div class="col-md-6">
                         <img src="img/image_1_1.png" alt="fiabilise Aveis Rh" class="img-responsive ">
                     </div>
-                        <span class="text-souligne text-gras text-justify">La bonne connaissance des collaborateurs</span><br/>
+                        <a href="#" data-toggle="modal" data-target="#ConnaissanceCollaborateur" title="Ouvrir l'article">
+                            <p class="text-souligne text-gras police-article-titre">La bonne connaissance des collaborateurs</p>
+                        </a>
+                        <!-- Modal -->
+                            <div class="modal fade" id="ConnaissanceCollaborateur" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">La bonne connaissance des collaborateurs</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                   <span class="visible-xs">Toutes les donn&eacute;es de vos collaborateurs sont centralis&eacute;es et structur&eacute;es : &eacute;tat civil, personnes à charge, 
+                            visites m&eacute;dicales, formations et comp&eacute;tences</span>
+                        <span class="hidden-xs">
+                            Av&eacute;is-Rh vous permet une gestion simple, ergonomique et intuitive de toutes les informations n&eacute;cessaires à 
+                            votre quotidien Rh. La base de donn&eacute;es Rh est s&eacute;curis&eacute;e, les accès sont contrôl&eacute;s. Vous pouvez acc&eacute;der à 
+                            vos donn&eacute;es de n’importe quel poste de travail. Les mises à jour sont facilit&eacute;es, chaque collaborateur peut 
+                            demander à actualiser son dossier. Votre base Rh conserve toute sa qualit&eacute;.
+                        </span>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        <!-- Fin Modal -->
                         <span class="visible-xs">Toutes les donn&eacute;es de vos collaborateurs sont centralis&eacute;es et structur&eacute;es : &eacute;tat civil, personnes à charge, 
                             visites m&eacute;dicales, formations et comp&eacute;tences</span>
                         <span class="hidden-xs">
@@ -93,27 +129,79 @@
                             demander à actualiser son dossier. Votre base Rh conserve toute sa qualit&eacute;.
                         </span>
                     </div>
-                </div><p></p>
-                <div class="col-md-1"></div>
-                <div class="col-md-5 article">
-                    <div class="col-md-4">
-                        <img src="img/image_1_1.png" alt="Web demo Aveis" class="img-responsive">
+                            </div><p></p>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5 article">
+                        <div class="col-md-6">
+                            <img src="img/image_1_1.png" alt="Web demo Aveis" class="img-responsive">
+                        </div>
+                        <a href="#" data-toggle="modal" data-target="#HistoriqueCarriere" title="Ouvrir l'article">
+                            <p class="text-souligne text-gras police-article-titre">Des historiques de carrière complets</p>
+                        </a>
+                        <!-- Modal -->
+                            <div class="modal fade" id="HistoriqueCarriere" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Des historiques de carrière complets</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                   <span class="visible-xs">Vous suivez l’&eacute;volution de carrière de chaque collaborateur point par point avec facilit&eacute;.</span>
+                            <span class="hidden-xs">Toutes les modifications du contrat de travail sont trac&eacute;es  et histori&eacute;es : type de contrat,
+                                de r&eacute;mun&eacute;ration, de poste, d’affectation, d’horaires, de classement ou de grade, ... Il n’y a pas de limite dans 
+                                l’historique, vous suivez toute la carrière de vos collaborateurs. L’historique peut être saisi au fur et à 
+                                mesure, à votre rythme ou import&eacute; automatiquement à partir d’un logiciel ou tableau xls.
+                            </span>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        <!-- Fin Modal -->
+                            <span class="visible-xs">Vous suivez l’&eacute;volution de carrière de chaque collaborateur point par point avec facilit&eacute;.</span>
+                            <span class="hidden-xs">Toutes les modifications du contrat de travail sont trac&eacute;es  et histori&eacute;es : type de contrat,
+                                de r&eacute;mun&eacute;ration, de poste, d’affectation, d’horaires, de classement ou de grade, ... Il n’y a pas de limite dans 
+                                l’historique, vous suivez toute la carrière de vos collaborateurs. L’historique peut être saisi au fur et à 
+                                mesure, à votre rythme ou import&eacute; automatiquement à partir d’un logiciel ou tableau xls.
+                            </span>
                     </div>
-                        <span class="text-souligne text-gras text-justify">Des historiques de carrière complets</span>,
-                        <span class="visible-xs">Vous suivez l’&eacute;volution de carrière de chaque collaborateur point par point avec facilit&eacute;.</span>
-                        <span class="hidden-xs">Toutes les modifications du contrat de travail sont trac&eacute;es  et histori&eacute;es : type de contrat,
-                            de r&eacute;mun&eacute;ration, de poste, d’affectation, d’horaires, de classement ou de grade, ... Il n’y a pas de limite dans 
-                            l’historique, vous suivez toute la carrière de vos collaborateurs. L’historique peut être saisi au fur et à 
-                            mesure, à votre rythme ou import&eacute; automatiquement à partir d’un logiciel ou tableau xls.
-                        </span>
-                </div>
+            </div>
             </div><p></p>
             <div class="row">
+              <div class="col-md-10  col-md-offset-1">   
                 <div class="col-md-5 article">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <img src="img/image_1_3.jpg" alt="Web demo Aveis" class="img-responsive">
                     </div>
-                        <span class="text-souligne text-gras text-justify">La gestion &eacute;lectronique de tous les documents RH : courriers, contrats, avenants, …</span>,
+                        <a href="#" data-toggle="modal" data-target="#GestionElectonique" title="Ouvrir l'article">
+                            <p class="text-souligne text-gras police-article-titre">La gestion &eacute;lectronique de tous les documents RH : courriers, contrats, avenants, …</p>
+                        </a>
+                        <!-- Modal -->
+                            <div class="modal fade" id="GestionElectonique" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">La gestion &eacute;lectronique de tous les documents RH : courriers, contrats, avenants, …</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                   <span class="visible-xs">Vous cr&eacute;ez vos modèles de documents word, vous scannez et stockez tout type de document RH pour chaque collaborateur.</span>
+                                    <span class="hidden-xs">Par simple fusion dans word, vous cr&eacute;ez et faites &eacute;voluer tout type de modèle de document. 
+                                        Vos contrats, courriers, avenants sont alors g&eacute;n&eacute;r&eacute;s automatiquement. Vous organisez le classement des documents
+                                        des dossiers Rh et vous archivez tous les documents scann&eacute;s dans les bonnes rubriques. La consultation des 
+                                        documents est  contrôl&eacute;e et s&eacute;curis&eacute;e : les collaborateurs et les managers ne voient que les documents autoris&eacute;s.
+                                    </span>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        <!-- Fin Modal -->
                         <span class="visible-xs">Vous cr&eacute;ez vos modèles de documents word, vous scannez et stockez tout type de document RH pour chaque collaborateur.</span>
                         <span class="hidden-xs">Par simple fusion dans word, vous cr&eacute;ez et faites &eacute;voluer tout type de modèle de document. 
                             Vos contrats, courriers, avenants sont alors g&eacute;n&eacute;r&eacute;s automatiquement. Vous organisez le classement des documents
@@ -121,12 +209,41 @@
                             documents est  contrôl&eacute;e et s&eacute;curis&eacute;e : les collaborateurs et les managers ne voient que les documents autoris&eacute;s.
                         </span>
                 </div><p></p>
-                <div class="col-md-1"></div>
-                <div class="col-md-6 article">
-                    <div class="col-md-4">
+                <div class="col-md-2"></div>
+                <div class="col-md-5 article">
+                    <div class="col-md-6">
                         <img src="img/image_1_4.png" alt="Web demo Aveis" class="img-responsive">
                     </div>
-                        <span class="text-souligne text-gras text-justify">Le reporting social complet et automatique</span>,<br/>
+                       <a href="#" data-toggle="modal" data-target="#ReportingSocial" title="Ouvrir l'article">
+                        <p class="text-souligne text-gras police-article-titre">Le reporting social complet et automatique</p>
+                       </a>
+                        <!-- Modal -->
+                            <div class="modal fade" id="ReportingSocial" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Le reporting social complet et automatique</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                   <span class="visible-xs">Registres du personnel, bilan social, annuaires, organigrammes, trombinoscope, tableaux de bord, rapports sont fournis en standard.</span>
+                                    <span class="hidden-xs">
+                                        Vos besoins de reporting sont couverts. Plusieurs dizaines de rapports sont disponibles et utilisables par tous.
+                                        <br/><span>Les informations proviennent directement des  dossiers collaborateurs.</span>
+                                        Vous n’avez pas besoin de faire des extractions complexes et chronophages. <br/>L’interface intuitive donne enfin 
+                                        la main aux managers qui sont aptes à analyser les informations en toute autonomie. <br/>Le reporting peut être 
+                                        d&eacute;taill&eacute; au plus fin, par service, &eacute;tablissement, soci&eacute;t&eacute;. Le reporting peut &eacute;galement être consolid&eacute; au 
+                                        niveau du Groupe. <br/>Au besoin, l’outil de requête int&eacute;gr&eacute; WD Etat permet à vos &eacute;quipes de personnaliser vos 
+                                        propres rapports.
+                                    </span>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        <!-- Fin Modal -->
                         <span class="visible-xs">Registres du personnel, bilan social, annuaires, organigrammes, trombinoscope, tableaux de bord, rapports sont fournis en standard.</span>
                         <span class="hidden-xs">
                             Vos besoins de reporting sont couverts. Plusieurs dizaines de rapports sont disponibles et utilisables par tous.
@@ -138,272 +255,316 @@
                             propres rapports.
                         </span>
                 </div>
+              </div> 
             </div><p></p>
         </div><br/>
         </div>
             <!-- /.pied de page -->
             
             <footer>
-            <div class="row">
-                <div class="col-md-12 cadre-un fond article-bandeau article-bandeau-gauche">
-                    <div class="col-md-3">
+                <div class="row ">
+                    <div class="container-fluid boxes">
+                    <div class="col-md-5 col-xs-12 cadre-un fond article-bandeau article-bandeau-gauche">
+                        <div class="col-md-2 hidden-xs">
                         <img src="img/demo.png" alt="Aveis web demo" class="img-responsive">
-                    </div>
-                    <div class="col-md-9">
-                        <div class="row">
-                            <div class="col-md-12 text-souligne text-gras text-justify">Les web-d&eacute;mos gratuites - Inscription</div>
-                            <div class="col-md-12 text-left">
-                                <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date1">Jeudi 14 mai &agrave; 14h30</a>
-                                    <div class="modal fade inscription_demo-modal-date1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h2 class="modal-title">Inscription &agrave; une web-d&eacute;mo</h2>
-                                            </div><p></p>
-                                            <div class="modal-body">
-                                                <form name="valeur" id="valeur" class="form-horizontal">
-                                                    <div class="row">
-                                                        <div class="col-md-7">
-                                                            <div>
-                                                                <p class="col-sm-4 control-label">Date retenue :</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="pMailEmetteur" value="12/05/2015" readonly="">
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-12 text-souligne text-gras text-justify">Les web-d&eacute;mos gratuites - Inscription</div>
+                                <div class="col-md-12 text-left">
+                                    <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date1"><script> document.write("Jeudi "+jeudi[0] + " à 14h30 (Paris)")</script></a>
+                                        <div class="modal fade inscription_demo-modal-date1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h2 class="modal-title">Inscription &agrave; une web-d&eacute;mo</h2>
+                                                </div><p></p>
+                                                <div class="modal-body">
+                                                    <form name="jeudi1" id="valeur" class="form-horizontal">
+                                                        <div class="row">
+                                                            <div class="col-md-7">
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label">Date retenue :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" value="" name="jeudi_1" readonly="">
+                                                                    </div>
                                                                 </div>
-                                                            </div><div>
-                                                                <p class="col-sm-4 control-label">Email <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="email" class="text" required="" name="pMailEmetteur">
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label"> <span class="text-danger">*</span> Email :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="email" class="text" required="" name="pMailEmetteur">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="nom">
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label"><span class="text-danger">*</span> Nom :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="nom">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Pr&eacute;nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="prenom">
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label"> Pr&eacute;nom :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="prenom">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <!-- mail du destinataire c'est à dire nous (aveis)-->
-                                                                <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
-                                                            <!-- sujet ou provenance mail du : ici c'est le site principal-->
-                                                            <input type="hidden" class="text" name="pSujet" value="Aveis RH">
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Corps du mail <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
-                                                                        </div>
-                                                                        <p></p>
-                                                                        <div class="col-md-6">
-                                                                            <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
+                                                                <div class="row col-md-12">
+                                                                      <p class="control-label col-md-4"><span class="text-danger">*</span> Civilit&eacute; :</p>
+                                                                    <div class="col-md-8">
+                                                                        <select class="text col-md-8" name="civilite">
+                                                                                <option value="M." >M. </option>
+                                                                                <option value="Mme">Mme</option>
+                                                                                <option value="Mlle">Mlle</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- mail du destinataire c'est à dire nous (aveis)-->
+                                                                    <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
+                                                                <!-- sujet ou provenance mail du : ici c'est le site principal-->
+                                                                <input type="hidden" class="text" name="pSujet" value="Aveis RH">
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label">Corps du mail : <span class="facul">(Facultatif)</span></p>
+                                                                    <div class="col-sm-5">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
+                                                                            </div>
+                                                                            <p></p>
+                                                                            <div class="col-md-6">
+                                                                                <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                                <!-- copie du mail-->
-                                                                    <input type="hidden" class="form-control" name="pMailCopie">
-                                                                <!-- Piece jointe du mail-->
-                                                                    <input type="hidden" class="form-control" name="pFichierjoint">
-                                                            <div class="row ">
-                                                                <label class="col-sm-1 control-label"></label>
-                                                                <div class="form-group col-sm-5 col-sm-offset-4" >
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-5 ligne_verticale visible-lg">
-                                                                <div class="">
-                                                                  <div class="col-sm-12">
-                                                                      <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
-                                                                      <p  class="text-center">+33 9 70 40 87 75</p>
-                                                                  </div>
-                                                                  <div class="col-sm-12">
-                                                                      <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
-                                                                  </div>
-                                                                </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div> 
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
-                                            </div>
-                                        </div> <!-- Fin modal-content --> 
-                                      </div>
-                                    </div>
-                            </div>
-                            <div class="col-md-12 text-left">
-                                <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date2">Jeudi 21 mai &agrave; 14h30</a>
-                                    <div class="modal fade inscription_demo-modal-date2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h2 class="modal-title">Nous contacter</h2>
-                                            </div><p></p>
-                                            <div class="modal-body">
-                                                <form name="valeur" id="valeur" class="form-horizontal">
-                                                    <div class="row">
-                                                        <div class="col-md-7">
-                                                            <div>
-                                                                <p class="col-sm-4 control-label">Email <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="email" class="text" required="" name="pMailEmetteur">
-                                                                </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="nom">
-                                                                </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Pr&eacute;nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="prenom">
-                                                                </div>
-                                                            </div>
-                                                            <!-- mail du destinataire c'est à dire nous (aveis)-->
-                                                                <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
-                                                            <!-- sujet ou provenance mail du : ici c'est le site principal-->
-                                                            <input type="hidden" class="text" name="pSujet" value="Aveis RH">
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Corps du mail <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
-                                                                        </div>
-                                                                        <p></p>
-                                                                        <div class="col-md-6">
-                                                                            <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
-                                                                        </div>
+                                                                    <!-- copie du mail-->
+                                                                        <input type="hidden" class="form-control" name="pMailCopie">
+                                                                    <!-- Piece jointe du mail-->
+                                                                        <input type="hidden" class="form-control" name="pFichierjoint">
+                                                                <div class="row ">
+                                                                    <label class="col-sm-1 control-label"></label>
+                                                                    <div class="form-group col-sm-5 col-sm-offset-4" >
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                                <!-- copie du mail-->
-                                                                    <input type="hidden" class="form-control" name="pMailCopie">
-                                                                <!-- Piece jointe du mail-->
-                                                                    <input type="hidden" class="form-control" name="pFichierjoint">
-                                                            <div class="row ">
-                                                                <label class="col-sm-1 control-label"></label>
-                                                                <div class="form-group col-sm-5 col-sm-offset-4" >
-                                                                </div>
+                                                            <div class="col-md-5 ligne_verticale visible-lg">
+                                                                    <div class="">
+                                                                      <div class="col-sm-12">
+                                                                          <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
+                                                                          <p  class="text-center">+33 9 70 40 87 75</p>
+                                                                      </div>
+                                                                      <div class="col-sm-12">
+                                                                          <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
+                                                                      </div>
+                                                                    </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-5 ligne_verticale visible-lg">
-                                                                <div class="">
-                                                                  <div class="col-sm-12">
-                                                                      <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
-                                                                      <p  class="text-center">+33 9 70 40 87 75</p>
-                                                                  </div>
-                                                                  <div class="col-sm-12">
-                                                                      <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
-                                                                  </div>
+                                                    </form>
+                                                </div> 
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
+                                                </div>
+                                            </div> <!-- Fin modal-content --> 
+                                          </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-12 text-left">
+                                    <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date2"><script> document.write("Jeudi "+jeudi[1] + " à 14h30 (Paris)")</script></a>
+                                        <div class="modal fade inscription_demo-modal-date2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h2 class="modal-title">Nous contacter</h2>
+                                                </div><p></p>
+                                                <div class="modal-body">
+                                                    <form name="valeur" id="valeur" class="form-horizontal">
+                                                       <div class="row">
+                                                            <div class="col-md-7">
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label">Date retenue :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="pMailEmetteur" value="21/05/2015" readonly="">
+                                                                    </div>
                                                                 </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div> 
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
-                                            </div>
-                                        </div> <!-- Fin modal-content --> 
-                                      </div>
-                                    </div>
-                            </div>
-                            <div class="col-md-12 text-left">
-                                <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date3">Jeudi 28 mai &agrave; 14h30</a>
-                                    <div class="modal fade inscription_demo-modal-date3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h2 class="modal-title">Inscription &agrave; une web-d&eacute;mo</h2>
-                                            </div><p></p>
-                                            <div class="modal-body">
-                                                <form name="valeur" id="valeur" class="form-horizontal">
-                                                    <div class="row">
-                                                        <div class="col-md-7">
-                                                            <div>
-                                                                <p class="col-sm-4 control-label">Email <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="email" class="text" required="" name="pMailEmetteur">
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label"> <span class="text-danger">*</span> Email :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="email" class="text" required="" name="pMailEmetteur">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="nom">
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label"><span class="text-danger">*</span> Nom :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="nom">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Pr&eacute;nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" class="text" required="" name="prenom">
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label"> Pr&eacute;nom :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="prenom">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <!-- mail du destinataire c'est à dire nous (aveis)-->
-                                                                <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
-                                                            <!-- sujet ou provenance mail du : ici c'est le site principal-->
-                                                            <input type="hidden" class="text" name="pSujet" value="Aveis RH">
-                                                            <div class="">
-                                                                <p class="col-sm-4 control-label">Corps du mail <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                                <div class="col-sm-5">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
-                                                                        </div>
-                                                                        <p></p>
-                                                                        <div class="col-md-6">
-                                                                            <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
+                                                                <div class="row col-md-12">
+                                                                      <p class="control-label col-md-4"><span class="text-danger">*</span> Civilit&eacute; :</p>
+                                                                    <div class="col-md-8">
+                                                                        <select class="text col-md-8" name="civilite">
+                                                                                <option value="M." >M. </option>
+                                                                                <option value="Mme">Mme</option>
+                                                                                <option value="Mlle">Mlle</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- mail du destinataire c'est à dire nous (aveis)-->
+                                                                    <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
+                                                                <!-- sujet ou provenance mail du : ici c'est le site principal-->
+                                                                <input type="hidden" class="text" name="pSujet" value="Aveis RH">
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label">Corps du mail : <span class="facul">(Facultatif)</span></p>
+                                                                    <div class="col-sm-5">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
+                                                                            </div>
+                                                                            <p></p>
+                                                                            <div class="col-md-6">
+                                                                                <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                                <!-- copie du mail-->
-                                                                    <input type="hidden" class="form-control" name="pMailCopie">
-                                                                <!-- Piece jointe du mail-->
-                                                                    <input type="hidden" class="form-control" name="pFichierjoint">
-                                                            <div class="row ">
-                                                                <label class="col-sm-1 control-label"></label>
-                                                                <div class="form-group col-sm-5 col-sm-offset-4" >
+                                                                    <!-- copie du mail-->
+                                                                        <input type="hidden" class="form-control" name="pMailCopie">
+                                                                    <!-- Piece jointe du mail-->
+                                                                        <input type="hidden" class="form-control" name="pFichierjoint">
+                                                                <div class="row ">
+                                                                    <label class="col-sm-1 control-label"></label>
+                                                                    <div class="form-group col-sm-5 col-sm-offset-4" >
+                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                            <div class="col-md-5 ligne_verticale visible-lg">
+                                                                    <div class="">
+                                                                      <div class="col-sm-12">
+                                                                          <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
+                                                                          <p  class="text-center">+33 9 70 40 87 75</p>
+                                                                      </div>
+                                                                      <div class="col-sm-12">
+                                                                          <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
+                                                                      </div>
+                                                                    </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="col-md-5 ligne_verticale visible-lg">
-                                                                <div class="">
-                                                                  <div class="col-sm-12">
-                                                                      <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
-                                                                      <p  class="text-center">+33 9 70 40 87 75</p>
-                                                                  </div>
-                                                                  <div class="col-sm-12">
-                                                                      <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
-                                                                  </div>
+                                                    </form>
+                                                </div> 
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
+                                                </div>
+                                            </div> <!-- Fin modal-content --> 
+                                          </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-12 text-left">
+                                    <a href="" class="" data-toggle="modal" data-target=".inscription_demo-modal-date3"><script> document.write("Jeudi "+jeudi[2] + " à 14h30 (Paris)")</script></a>
+                                        <div class="modal fade inscription_demo-modal-date3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h2 class="modal-title">Inscription &agrave; une web-d&eacute;mo</h2>
+                                                </div><p></p>
+                                                <div class="modal-body">
+                                                    <form name="valeur" id="valeur" class="form-horizontal">
+                                                        <div class="row">
+                                                            <div class="col-md-7">
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label">Date retenue :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="pMailEmetteur" value="28/05/2015" readonly="">
+                                                                    </div>
                                                                 </div>
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label"> <span class="text-danger">*</span> Email :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="email" class="text" required="" name="pMailEmetteur">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label"><span class="text-danger">*</span> Nom :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="nom">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label"> Pr&eacute;nom :</p>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" class="text" required="" name="prenom">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row col-md-12">
+                                                                      <p class="control-label col-md-4"><span class="text-danger">*</span> Civilit&eacute; :</p>
+                                                                    <div class="col-md-8">
+                                                                        <select class="text col-md-8" name="civilite">
+                                                                                <option value="M." >M. </option>
+                                                                                <option value="Mme">Mme</option>
+                                                                                <option value="Mlle">Mlle</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- mail du destinataire c'est à dire nous (aveis)-->
+                                                                    <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
+                                                                <!-- sujet ou provenance mail du : ici c'est le site principal-->
+                                                                <input type="hidden" class="text" name="pSujet" value="Aveis RH">
+                                                                <div class="row col-md-12">
+                                                                    <p class="col-sm-4 control-label">Corps du mail : <span class="facul">(Facultatif)</span></p>
+                                                                    <div class="col-sm-5">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <textarea name="pCorpsmail" rows="5" cols="22" class="text" required=""></textarea>
+                                                                            </div>
+                                                                            <p></p>
+                                                                            <div class="col-md-6">
+                                                                                <input class="btn btn-primary" type="button" value="Envoyer le mail" onclick="construitxml()">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                    <!-- copie du mail-->
+                                                                        <input type="hidden" class="form-control" name="pMailCopie">
+                                                                    <!-- Piece jointe du mail-->
+                                                                        <input type="hidden" class="form-control" name="pFichierjoint">
+                                                                <div class="row ">
+                                                                    <label class="col-sm-1 control-label"></label>
+                                                                    <div class="form-group col-sm-5 col-sm-offset-4" >
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-5 ligne_verticale visible-lg">
+                                                                    <div class="">
+                                                                      <div class="col-sm-12">
+                                                                          <p class="text-center text-gras">T&eacute;l&eacute;phone :</p> 
+                                                                          <p  class="text-center">+33 9 70 40 87 75</p>
+                                                                      </div>
+                                                                      <div class="col-sm-12">
+                                                                          <p class="text-center text-gras">Adresse postale :</p> <p  class="text-center">France - 41, rue du Lac - 69003 Lyon - La Part-Dieu</p>
+                                                                      </div>
+                                                                    </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </form>
-                                            </div> 
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
-                                            </div>
-                                        </div> <!-- Fin modal-content --> 
-                                      </div>
-                                    </div>
+                                                    </form>
+                                                </div> 
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer <span class="glyphicon glyphicon-remove-sign"></span></button>
+                                                </div>
+                                            </div> <!-- Fin modal-content --> 
+                                          </div>
+                                        </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="cadre-un fond article-bandeau article-bandeau-milieu">
-                        <div class="col-md-12">
-                            <center><a href="" class="" data-toggle="modal" data-target=".bs-example-modal-lg">Nous contacter</a></center>
-                            <br/><br/><br/><div class="col-md-12">
+                        <div class="col-md-2 col-xs-12 cadre-un fond article-bandeau article-bandeau-milieu">
+                            <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" class="police-nous-contacter">Nous contacter</a>
+                            <div class="col-md-12">
                                 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                   <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
@@ -415,35 +576,35 @@
                                             <form name="valeur" id="valeur" class="form-horizontal">
                                                 <div class="row">
                                                     <div class="col-md-7">
-                                                        <div>
-                                                            <p class="col-sm-4 control-label">Email <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                        <div class="row col-md-12">
+                                                            <p class="col-sm-4 control-label"><span class="text-danger">*</span> Email :</p>
                                                             <div class="col-sm-5">
                                                                 <input type="email" class="text" required="" name="pMailEmetteur">
                                                             </div>
                                                         </div>
-                                                        <div class="">
-                                                            <p class="col-sm-4 control-label">Civilit&eacute; <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                            <div class="col-sm-5">
-                                                                <select class="text" name="civilite">
-                                                                    <option value="M." >M. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                                        <div class="row col-md-12">
+                                                              <p class="control-label col-md-4"><span class="text-danger">*</span> Civilit&eacute; :</p>
+                                                            <div class="col-md-8">
+                                                                <select class="text col-md-8" name="civilite">
+                                                                        <option value="M." >M. </option>
                                                                         <option value="Mme">Mme</option>
                                                                         <option value="Mlle">Mlle</option>
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="">
-                                                            <p class="col-sm-4 control-label">Nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
-                                                            <div class="col-sm-5">
+                                                        <div class="row col-md-12">
+                                                            <p class="col-md-4 control-label"><span class="text-danger">*</span> Nom :</p>
+                                                            <div class="col-md-5">
                                                                 <input type="text" class="text" required="" name="nom">
                                                             </div>
                                                         </div>
-                                                        <div class="">
-                                                            <p class="col-sm-4 control-label">Pr&eacute;nom <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                        <div class="row col-md-12">
+                                                            <p class="col-sm-4 control-label">Pr&eacute;nom :</p>
                                                             <div class="col-sm-5">
                                                                 <input type="text" class="text" required="" name="prenom">
                                                             </div>
                                                         </div>
-                                                        <div class="">
+                                                        <div class="row col-md-12">
                                                             <p class="col-sm-4 control-label">Soci&eacute;t&eacute; :</p>
                                                             <div class="col-sm-5">
                                                                 <input type="text" class="text" name="societe">
@@ -453,8 +614,8 @@
                                                             <input class="text" type="hidden" name="pMailDestinataire" value="contact@aveis.net">
                                                         <!-- sujet ou provenance mail du : ici c'est le site principal-->
                                                         <input type="hidden" class="text" name="pSujet" value="Aveis RH">
-                                                        <div class="">
-                                                            <p class="col-sm-4 control-label">Corps du mail <span class="text-danger">*&nbsp;&nbsp;&nbsp;</span>:</p>
+                                                        <div class="row col-md-12">
+                                                            <p class="col-sm-4 control-label"><span class="text-danger">*</span> Corps du mail :</p>
                                                             <div class="col-sm-5">
                                                                 <div class="row">
                                                                     <div class="col-md-12">
@@ -503,38 +664,57 @@
                                 </div>
                             </div>
                         </div>
+                <div class="col-md-5 col-xs-12 cadre-un fond article-bandeau article-bandeau-droit">  
+                    <div class="row">
+                        <div class="col-md-2 hidden-xs">
+                            <img src="img/demo.png" alt="Aveis La documentation" class="img-responsive">
+                        </div>
+                        <div class="col-md-10">
+                            <div class="col-md-12 text-souligne text-gras text-justify">La documentation</div> 
+                            <div class="col-md-12  text-left"><a href="Documentations/Aveis-Rh_Pr&eacute;sentation.pdf" target="_blank">Av&eacute;is Rh</a></div>
+                            <!--<div class="col-md-12  text-left"><a href="#" target="_blank">Etudes de cas Av&eacute;is Rh</a></div> -->
+                            <div class="col-md-12 text-left"><a href="Documentations/Aveis-Rh_Fonctions.pdf" target="_blank">D&eacute;tail des fonctions</a></div>
+                            <div class="col-md-12 text-left"><a href="Documentations/Aveis-Rh_ExpertsComptables.pdf" target="_blank">Av&eacute;is Rh pour experts-comptables</a></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="cadre-un fond article-bandeau article-bandeau-droit">
-                    <div class="col-md-3">
-                        <img src="img/demo.png" alt="Aveis La documentation" class="img-responsive">
                     </div>
-                    <div class="col-md-9">
-                        <div class="col-md-12 text-souligne text-gras text-justify">La documentation</div> 
-                        <div class="col-md-12  text-left"><a href="Documentations/Aveis-Rh_Pr&eacute;sentation.pdf" target="_blank">Av&eacute;is Rh</a></div>
-                        <!--<div class="col-md-12  text-left"><a href="#" target="_blank">Etudes de cas Av&eacute;is Rh</a></div> -->
-                        <div class="col-md-12 text-left"><a href="Documentations/Aveis-Rh_Fonctions.pdf" target="_blank">D&eacute;tail des fonctions</a></div>
-                        <div class="col-md-12 text-left"><a href="Documentations/Aveis-Rh_ExpertsComptables.pdf" target="_blank">Av&eacute;is Rh pour experts-comptables</a></div>
-                    </div>
-                </div><br/><br/>
             </div> 
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="row footer-footer">
+                    <div class="col-md-8">
                         <div class="row">
                             <div class="col-md-4">
-                                <a href="aveis_decouvrez.html" class="lien police-footer">D&eacute;couvrez Av&eacute;is</a>
+                                <a href="aveis_fiabilisez.html" class="lien police-bando-haut">Voir tous nos logiciel</a>
                             </div>
                             <div class="col-md-4">
-                                <a href="aveis_technologies.html" class="lien police-footer">La technologie à votre service</a>
+                                <a href="aveis_decouvrez.html" class="lien police-bando-haut">D&eacute;couvrez Av&eacute;is</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="aveis_technologies.html" class="lien police-bando-haut">La technologie à votre service</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <a href="mentions.html" class="lien police-footer">Mentions L&eacute;gales</a>
+                    <div class="col-md-4">
+                        <a href="mentions.html" class="lien police-bando-haut">Mentions L&eacute;gales</a>
                     </div>
                 </div>
             </footer>
     </div>
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $.fn.sameHeights = function(childrenSelector) {
+            $(this).each(function(){
+            var tallest = 0;
+            $(this).children(childrenSelector).each(function(i){
+            if (tallest < $(this).height()) { tallest = $(this).height(); }
+            });
+            $(this).children(childrenSelector).css({'height': tallest});
+            });
+            return this;
+};          $(document).ready(function() {
+            $('.boxes').sameHeights('.article-bandeau');
+            });
+        </script>
     </body>
 </html>
